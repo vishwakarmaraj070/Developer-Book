@@ -1,0 +1,99 @@
+/* side bar set up */
+div#slide-out {
+  margin-top: 55px;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggleSideBar {
+  transform: translateX(0%)!important;
+  transition: all 0.16s ease-in;
+}
+.side-nav .logo-wrapper {
+  height: 7.5rem;
+}
+
+.side-nav .logo-wrapper img{
+  width: auto;
+  height: 7.5rem;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+form.edit-form-box input {
+  border: none!important;
+  outline: none!important;
+  line-height: 1;
+  padding: 8px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+  width: 85%;
+  font-size: 0.9rem;
+}
+
+
+form.edit-form-box i{
+  width: auto;
+  height: auto;
+  padding: 8px;
+  border-radius: 0 5px 5px 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.side-nav .social a {
+  line-height: initial;
+  height: auto;
+  padding: 3px;
+  margin: 0 10px;
+}
+
+.absolute-top-center{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar-icon-right{
+  right: 10px;
+  margin: 0 10px;
+}
+
+.side-nav .collapsible-body a{
+  padding-left: 35px;
+}
+
+i.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.add-form-box .input-box input {
+  background: rgba(0,0,0,0.4);
+  border: none;
+  outline: none!important;
+  font-size: 80%;
+  color: #fff;
+}
+
+/* side bar set up */
+/* style main content */
+main.main-book-content, footer {
+  transition:all 0.2s ease-in-out;
+}
+
+.main-slide {
+  width: calc(100% - 15rem);
+  margin-left: 15rem!important;
+}
+
+.item-data-container .content-edit-box{
+  right: 1px;
+  top: 5px;
+}
+
+*:before{
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 900;
+}
+/* style main content */
+
