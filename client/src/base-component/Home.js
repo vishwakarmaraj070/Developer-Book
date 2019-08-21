@@ -9,6 +9,17 @@ import MainBaseComponet from './MainBaseComponet';
 
 
 export default class Home extends Component {
+
+    state={
+        isNotHome: false
+    }
+
+    isNotHome =(value)=>{
+        console.log(value)
+        this.setState({
+            isNotHome: true
+        })
+    }
     render() {
         return (
             <React.Fragment>
@@ -18,10 +29,17 @@ export default class Home extends Component {
                             return (
                                 <React.Fragment>
                                     {/* header */}
-                                    <Header />
-                                     <div className="main-component" style={{height: "70vh"}}>
-                                         {/* main component */}
-                                         <Route exact path="/:base" component={MainBaseComponet} />
+                                    <Header isNotHome={this.isNotHome}/>
+                                     <div className="main-component flex-center" style={{height: "70vh"}}>
+
+                                         {
+                                             this.state.isNotHome ? (
+                                                <Route exact path="/:base" component={MainBaseComponet} />
+                                             ) : (
+                                                <h1 className="display-1 text-info">Developer World Coming Soon</h1>
+                                             )
+                                         }
+                                        
                                     </div>   
                                     {/* <!-- login Modal --> */}
                                     <Login />

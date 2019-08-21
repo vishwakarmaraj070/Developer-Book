@@ -5,13 +5,11 @@ const Users = require('./api/Users')
 const path = require('path')
 
 const app = express()
-
 // use middle ware
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 // connect with db
-
 db =  require('./Keys/keys').mongoDBAlas
 mongoose.connect(process.env.MONGODB_URI || db, { useNewUrlParser: true }, (err) => {
     if (!err) {

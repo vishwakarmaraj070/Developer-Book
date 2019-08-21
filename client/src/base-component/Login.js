@@ -11,16 +11,13 @@ export default class Login extends Component {
 
     loginFormSubmit = () => {
         const { email, password } = this.state
-        console.log(email)
         axios.put(`/user/${email}`,{password})
             .then(res=>{
-                console.log(res)
                 if(res.data.succes === true){
                     window.localStorage.setItem('userId',res.data.data._id )
                     $('.modal-backdrop').removeClass('show')
                     $('#loginModalForm').removeClass('show').css('display', 'none')
-                    console.log(window.location.href.indexOf('3000'));
-                    if(window.location.href.indexOf('3000')){
+                    if(window.location.href.indexOf('3000') > 3){
                         window.location.href = `http://localhost:3000/${res.data.data.firstName.toLowerCase()}-book`
                     }
                     else{
@@ -28,7 +25,6 @@ export default class Login extends Component {
                     }
                 }
                 else if(res.data.succes === false){
-                    console.log("paaword in correct")
                     $('#loginModalForm span.password').html("Password is incorrect").addClass('red-text')
                 }
                 else{

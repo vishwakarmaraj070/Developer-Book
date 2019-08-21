@@ -1,28 +1,31 @@
 import React, { Component } from "react";
 import {NavLink} from 'react-router-dom'
-import Sidebar from './Sidebar'
-import { UserContextConsumer } from "../User/User.contenxt";
+
 
 export default class Header extends Component {
 
   state={
     isUser: true
   }
+
   render() {
     return (
       <React.Fragment>
-
         <header>
           {/* navbar here */}
           <nav className="navbar fixed-top navbar-expand-lg scrolling-navbar">
             <div className="container">
               {/* <!-- Brand --> */}
+              <div onClick={(e)=>{
+                    this.props.isNotHome()
+                  }}>
               <NavLink
                 className="navbar-brand waves-effect"
                 to="/"
               >
                 <strong className="blue-text">Developer World</strong>
               </NavLink>
+              </div>
 
               {/* <!-- Collapse --> */}
               <button
@@ -41,7 +44,9 @@ export default class Header extends Component {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 {/* <!-- Left --> */}
                 <ul className="navbar-nav mx-auto">
-                  <li className="nav-item mx-3">
+                  <li className="nav-item mx-3" onClick={(e)=>{
+                    this.props.isNotHome()
+                  }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
                       to="/Front-End"
@@ -49,7 +54,9 @@ export default class Header extends Component {
                       Front-End
                     </NavLink>
                   </li>
-                  <li className="nav-item mx-3">
+                  <li className="nav-item mx-3" onClick={(e)=>{
+                    this.props.isNotHome()
+                  }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
                       to="/Back-End"
@@ -57,7 +64,9 @@ export default class Header extends Component {
                       Back-End
                     </NavLink>
                   </li>
-                  <li className="nav-item mx-3">
+                  <li className="nav-item mx-3" onClick={(e)=>{
+                    this.props.isNotHome()
+                  }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
                       to="/Database"
@@ -65,7 +74,9 @@ export default class Header extends Component {
                       Database
                     </NavLink>
                   </li>
-                  <li className="nav-item mx-3">
+                  <li className="nav-item mx-3" onClick={(e)=>{
+                    this.props.isNotHome()
+                  }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
                       to="/Cloud"
@@ -87,7 +98,7 @@ export default class Header extends Component {
                 {/* <!-- Right --> */}
                 <ul className="navbar-nav nav-flex-icons">
                   <li className="nav-item">
-                    <NavLink
+                    <NavLink 
                     data-toggle="modal" data-target="#loginModalForm"
                       to="/login"
                       className="btn btn-dark px-4 py-2 waves-effect m-0"
