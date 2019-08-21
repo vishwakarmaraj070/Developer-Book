@@ -22,8 +22,6 @@ export default class App extends Component {
                 console.log('users book call')
               }
             }
-            console.log(UserContext.user)
-            console.log(window.localStorage.getItem('userId'))
             return (
               <Router>
                 <React.Fragment>
