@@ -41,25 +41,36 @@ export default class Header extends Component {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 {/* <!-- Left --> */}
                 <ul className="navbar-nav mx-auto">
-                  <li className="nav-item active">
-                    <NavLink className="nav-NavLink waves-effect white-text" to="/dev">
-                      Home
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
+                  <li className="nav-item mx-3">
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/dev/reactjs"
+                      to="/Front-End"
                     >
                       Front-End
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item mx-3">
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/dev/back-end"
+                      to="/Back-End"
                     >
                       Back-End
+                    </NavLink>
+                  </li>
+                  <li className="nav-item mx-3">
+                    <NavLink
+                      className="nav-NavLink waves-effect white-text"
+                      to="/Database"
+                    >
+                      Database
+                    </NavLink>
+                  </li>
+                  <li className="nav-item mx-3">
+                    <NavLink
+                      className="nav-NavLink waves-effect white-text"
+                      to="/Cloud"
+                    >
+                      Cloud
                     </NavLink>
                   </li>
                   {/* <li className="nav-item">
@@ -81,7 +92,7 @@ export default class Header extends Component {
                       to="/login"
                       className="btn btn-dark px-4 py-2 waves-effect m-0"
                     >
-                      <i className="fab fa-sith mr-2" />Login
+                      <i className="fa fa-sign-in-alt mr-2" />Login
                     </NavLink>
                   </li>
                 </ul>
@@ -91,7 +102,7 @@ export default class Header extends Component {
           {/*end navbar here */}
 
           {/* sidebar */}
-          <Sidebar />
+          {/* <Sidebar /> */}
         </header>
        
       </React.Fragment>

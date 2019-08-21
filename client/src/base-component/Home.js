@@ -19,10 +19,10 @@ export default class Home extends Component {
                                 <React.Fragment>
                                     {/* header */}
                                     <Header />
-                                     <main className="main-component">
+                                     <div className="main-component" style={{height: "70vh"}}>
                                          {/* main component */}
-                                         <Route exact path="/dev/:base" component={MainBaseComponet} />
-                                    </main>   
+                                         <Route exact path="/:base" component={MainBaseComponet} />
+                                    </div>   
                                     {/* <!-- login Modal --> */}
                                     <Login />
                                     {/* <!-- Modal --> */}

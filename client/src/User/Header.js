@@ -74,7 +74,10 @@ export default class UserHeader extends Component {
                         <i className="fa fa-bars" />
                       </a>
                     </div>
-                      <Link className="navbar-brand waves-effect" to={`/${UserContext.user.firstName.toLowerCase()}-book`} >
+                    <Link className="navbar-brand waves-effect mx-3" to='/' >
+                        <strong className="blue-text text-capitalize">Developer World</strong>
+                      </Link>
+                      <Link className="navbar-brand waves-effect mx-3" to={`/${UserContext.user.firstName.toLowerCase()}-book`} >
                         <strong className="blue-text text-capitalize">{UserContext.user.firstName}</strong>
                       </Link>
 

@@ -19,8 +19,8 @@ export default class Login extends Component {
                     window.localStorage.setItem('userId',res.data.data._id )
                     $('.modal-backdrop').removeClass('show')
                     $('#loginModalForm').removeClass('show').css('display', 'none')
-                    console.log(window.location.href);
-                    if(window.location.href === 'http://localhost:3000/'){
+                    console.log(window.location.href.indexOf('3000'));
+                    if(window.location.href.indexOf('3000')){
                         window.location.href = `http://localhost:3000/${res.data.data.firstName.toLowerCase()}-book`
                     }
                     else{
