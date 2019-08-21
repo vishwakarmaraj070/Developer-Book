@@ -5,8 +5,6 @@ import Home from './base-component/Home';
 import { UserContextConsumer } from './User/User.contenxt';
 import UserHome from './User/Home';
 
-
-
 export default class App extends Component {
 
   render() {

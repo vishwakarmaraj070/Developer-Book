@@ -19,7 +19,13 @@ export default class Login extends Component {
                     window.localStorage.setItem('userId',res.data.data._id )
                     $('.modal-backdrop').removeClass('show')
                     $('#loginModalForm').removeClass('show').css('display', 'none')
-                    window.location.href = `http://localhost:3000/${res.data.data.firstName.toLowerCase()}-book`
+                    console.log(window.location.href);
+                    if(window.location.href === 'http://localhost:3000/'){
+                        window.location.href = `http://localhost:3000/${res.data.data.firstName.toLowerCase()}-book`
+                    }
+                    else{
+                        window.location.href = `https://raj-developer-book.herokuapp.com/${res.data.data.firstName.toLowerCase()}-book`
+                    }
                 }
                 else if(res.data.succes === false){
                     console.log("paaword in correct")
