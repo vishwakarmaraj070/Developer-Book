@@ -98,7 +98,7 @@ export default class UserHeader extends Component {
                                     e.preventDefault();
                                     this.activeBook(UserContext.user._id, book.bookOf)
                                   }} key={index} className="nav-item ">
-                                    <Link to={`/${UserContext.user.firstName.toLowerCase()}-book/${book.bookOf}`} className="border border-light mx-0 mx-3 nav-link px-2 py-1 text-capitalize waves-effect waves-light">
+                                    <Link to={`/${UserContext.user.firstName.toLowerCase()}-book/${book.bookOf}`} className="border border-light mx-2 nav-link px-2 py-1 text-capitalize waves-effect waves-light">
                                       {
                                         book.bookOf
                                       }
