@@ -46,7 +46,7 @@ export default class UserHeader extends Component {
 
 
   logOut = ()=>{
-    console.log('logout click')
+    window.location.href = 'https://raj-developer-book.herokuapp.com/'
   }
 
   render() {
