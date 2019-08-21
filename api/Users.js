@@ -125,7 +125,6 @@ router.get('/book/:id', (req, res) => {
             res.json({ err: err, succes: false })
         })
 })
-cd 
 // add book router
 router.post('/book/:id', (req, res) => {
     users.where({ _id: req.params.id })
