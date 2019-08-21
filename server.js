@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI || db, { useNewUrlParser: true }, (err)
     else {
         console.log(`MongoDb Error : ${err}`)
     } 
-})
+}) 
 // Users router
 app.use('/user', Users)
 

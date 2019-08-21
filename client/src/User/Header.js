@@ -20,22 +20,23 @@ export default class UserHeader extends Component {
 
   addBook =(id)=>{
     const {bookOf} = this.state;
-    console.log(bookOf)
-    console.log(id)
+    if(this.state.bookOf.length > 1){
     axios.post(`/user/book/${id}`, {bookOf})
       .then(res=>{
-        console.log(res.data)
         this.props.UserContext.userbooks(id)
+        this.setState({
+          bookOf: ''
+        })
       })
       .catch(err=>{
         console.log(err)
       })
+    }
   }
 
   activeBook=(id, activeBook)=>{
     axios.put(`/user/book/activeBook/${id}`,{activeBook})
     .then(res=>{
-      console.log(res.data)
       this.props.UserContext.userbooks(id)
     })
     .catch(err=>{
@@ -78,7 +79,7 @@ export default class UserHeader extends Component {
                         <strong className="blue-text text-capitalize">Developer World</strong>
                       </Link>
                       <Link className="navbar-brand waves-effect mx-3" to={`/${UserContext.user.firstName.toLowerCase()}-book`} >
-                        <strong className="blue-text text-capitalize">{UserContext.user.firstName}</strong>
+                        <strong className="blue-text text-capitalize">{`${UserContext.user.firstName} ${UserContext.user.lastName}`}</strong>
                       </Link>
 
                       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#userNavbar"
@@ -115,6 +116,13 @@ export default class UserHeader extends Component {
                           {
                             this.state.isAddBook ? (
                               <li className="nav-item ">
+                                <form onSubmit={(e)=>{
+                                  e.preventDefault()
+                                  this.addBook(UserContext.user._id)
+                                  this.setState({
+                                    isAddBook: false
+                                  })
+                                }}>
                                 <div className="md-form input-group m-0">
                                   <input onChange={(e)=>{
                                     this.setState({
@@ -127,11 +135,12 @@ export default class UserHeader extends Component {
                                       e.preventDefault()
                                       this.addBook(UserContext.user._id)
                                       this.setState({
-                                        isAddBook: false
+                                        isAddBook: false,
                                       })
                                     }} className="btn m-0 nav-link py-2 waves-effect" type="button" id="MaterialButton-addon2">Add</button>
                                   </div>
                                 </div>
+                                </form>
                               </li>
                             ) : (
                                 <li className="nav-item">

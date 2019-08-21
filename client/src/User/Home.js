@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import UserHeader from './Header';
-import Footer from './Footer';
 import { Route } from 'react-router-dom'
 import UserMain from './UserMain';
 import { UserContextConsumer } from './User.contenxt';
+import Footer from '../base-component/Footer';
 
 export default class Home extends Component {
+
     render() {
         return (
             <React.Fragment>
@@ -17,8 +18,8 @@ export default class Home extends Component {
                             <React.Fragment>
                                 {/* header */}
                                 <UserHeader UserContext={UserContext} />
-                                <main className="main-book-content mx-4">
-                                    user home
+                                <main className="main-book-content m-4" style={{minHeight: "80vh"}}>
+                                    
                                     <Route path={`/${user.firstName}-book/${user.activeBook}/:userBook`} component={UserMain} />
                                 </main>
                                 {/* footer */}

@@ -26,7 +26,9 @@ export default class UserSidebar extends Component {
                 .then(res => {
                     this.props.userbooks(id)
                     this.setState({
-                        isAddMenu: false
+                        isAddMenu: false,
+                        menu: '',
+                        item: ''
                     })
                 })
                 .catch(err => {
@@ -100,6 +102,12 @@ export default class UserSidebar extends Component {
                                                                 e.preventDefault();
                                                                 this.addMenu(UserContext.user._id, UserContext.user.activeBook)
                                                             }} type="submit" className="btn btn-primary btn-sm">Add</button>
+                                                            <button onClick={(e) => {
+                                                                e.preventDefault();
+                                                                this.setState({
+                                                                    isAddMenu:false
+                                                                })
+                                                            }} type="submit" className="btn btn-primary btn-sm">Cancle</button>
                                                         </form>
                                                         ) : (
                                                             <div>

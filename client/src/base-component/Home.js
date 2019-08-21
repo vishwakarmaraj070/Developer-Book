@@ -28,13 +28,14 @@ export default class Home extends Component {
                         UserContext => {
                             return (
                                 <React.Fragment>
+                                    
                                     {/* header */}
                                     <Header isNotHome={this.isNotHome}/>
                                      <div className="main-component flex-center" style={{height: "70vh"}}>
 
                                          {
                                              this.state.isNotHome ? (
-                                                <Route exact path="/:base" component={MainBaseComponet} />
+                                                <Route exact path="/dev/:base" component={MainBaseComponet} />
                                              ) : (
                                                 <h1 className="display-1 text-info">Developer World Coming Soon</h1>
                                              )

@@ -53,7 +53,9 @@ export default class UserMain extends Component {
       })
       .then(res => {
         this.setState({
-          isAddContent: false
+          isAddContent: false,
+          content:'',
+          header: ''
         });
       })
       .catch(err => {
@@ -241,6 +243,7 @@ export default class UserMain extends Component {
                           </div>
                           <div className="card-footer bg-transparent border-success">
                             <button
+                            type='submit'
                               onClick={e => {
                                 e.preventDefault();
                                 this.handleAddContent(

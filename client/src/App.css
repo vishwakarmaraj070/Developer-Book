@@ -110,4 +110,10 @@ span.edit-pen i {
 .editItemForm{
   display: none;
 }
+
+::placeholder{
+  color: #fff;
+  opacity: 5;
+  font-size: 80%;
+}
 /*# sourceMappingURL=App.css.map */

@@ -27,7 +27,8 @@ export default class App extends Component {
             return (
               <Router>
                 <React.Fragment>
-                  <Route path="/" component={Home} />
+                  <Route exact path="/" component={Home} />
+                  <Route path="/dev" component={Home} />
                   {
                     UserContext.user === null ? " " :  <Route path={`/${UserContext.user.firstName}-book`} component={UserHome} />
                   }

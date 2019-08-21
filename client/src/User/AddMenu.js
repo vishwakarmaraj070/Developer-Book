@@ -32,7 +32,10 @@ export default class AddMenu extends Component {
     return (
       <React.Fragment>
         <form
-          onSubmit={this.handleOnSubmit}
+          onSubmit={e => {
+            e.preventDefault();
+            this.handleOnSubmit();
+          }}
           autoComplete="off"
           className="add-form-box"
         >

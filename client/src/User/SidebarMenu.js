@@ -33,11 +33,12 @@ export default class SidebarMenu extends Component {
     axios
       .put(`/user/book/add/item/${id}`, { activeBook, menu, newMenu })
       .then(res => {
-        console.log(res);
         this.props.userbooks(id);
+        this.setState({
+          newMenuValue: ''
+        })
       })
       .catch(err => {
-        console.log(err);
       });
     }
   };

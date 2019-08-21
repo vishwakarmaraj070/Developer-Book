@@ -21,7 +21,7 @@ export default class Header extends Component {
                   }}>
               <NavLink
                 className="navbar-brand waves-effect"
-                to="/"
+                to="/dev"
               >
                 <strong className="blue-text">Developer World</strong>
               </NavLink>
@@ -49,7 +49,7 @@ export default class Header extends Component {
                   }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/Front-End"
+                      to="/dev/Front-End"
                     >
                       Front-End
                     </NavLink>
@@ -59,7 +59,7 @@ export default class Header extends Component {
                   }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/Back-End"
+                      to="/dev/Back-End"
                     >
                       Back-End
                     </NavLink>
@@ -69,7 +69,7 @@ export default class Header extends Component {
                   }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/Database"
+                      to="/dev/Database"
                     >
                       Database
                     </NavLink>
@@ -79,7 +79,7 @@ export default class Header extends Component {
                   }}>
                     <NavLink
                       className="nav-NavLink waves-effect white-text"
-                      to="/Cloud"
+                      to="/dev/Cloud"
                     >
                       Cloud
                     </NavLink>
