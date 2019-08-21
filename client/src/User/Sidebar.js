@@ -13,7 +13,6 @@ export default class UserSidebar extends Component {
 
 
     addMenu = (id, bookOf) => {
-        console.log(bookOf)
         const { menu, item } = this.state
         let menuItem = [{
             item: item,

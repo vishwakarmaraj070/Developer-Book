@@ -44,7 +44,6 @@ export default class SidebarMenu extends Component {
   };
 
   setEditItem =(item)=>{
-    console.log(item)
     $(`.editItemForm`).slideUp()
     $(`.editLink`).slideDown()
     const editForm = $(`.editItemForm[data-item="${item}"]`)
@@ -64,7 +63,6 @@ export default class SidebarMenu extends Component {
     if(newItem.length > 0){
     axios.put(`/user/book/update/menuItem/${id}`,{activeBook, menu, id, item, newItem})
       .then(res => {
-        console.log(res);
         this.props.userbooks(id);
       })
       .catch(err => {
@@ -78,7 +76,6 @@ export default class SidebarMenu extends Component {
     if(newMenu.length > 0){
     axios.put( `/user/book/update/menu/${id}`,{menu, activeBook, newMenu})
       .then(res => {
-        console.log(res);
         this.props.userbooks(id);
       })
       .catch(err => {
