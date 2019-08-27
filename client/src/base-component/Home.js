@@ -31,15 +31,33 @@ export default class Home extends Component {
                                     
                                     {/* header */}
                                     <Header isNotHome={this.isNotHome}/>
-                                     <div className="main-component flex-center" style={{height: "70vh"}}>
+                                     <div className="main-component flex-center mt-5" style={{minHeight: "100vh"}}>
 
                                          {
                                              this.state.isNotHome ? (
-                                                <Route exact path="/dev/:base" component={MainBaseComponet} />
+                                                 <div className="row w-100">
+                                                     <div className="col-12">
+                                                    <Route exact path="/dev/:base" component={MainBaseComponet} />
+                                                    </div>
+                                                    <div className="col-12">
+                                                    <div className="video-container w-50 m-5 mx-auto">
+                                                        <h2 className="border-bottom border-danger font-weight-bold h2-responsive mb-4 text-center text-default">How to Use</h2>
+                                                        <div className="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jrnJp6VEGmA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
                                              ) : (
-                                                <h1 className="display-1 text-info">Developer World Coming Soon</h1>
+                                                 <div className="video-container w-50 m-5">
+                                                     <h2 className="border-bottom border-danger font-weight-bold h2-responsive mb-4 text-center text-default">How to Use</h2>
+                                                     <div className="embed-responsive embed-responsive-16by9">
+                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jrnJp6VEGmA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                                    </div>
+                                                </div>
                                              )
                                          }
+                                         
                                         
                                     </div>   
                                     {/* <!-- login Modal --> */}

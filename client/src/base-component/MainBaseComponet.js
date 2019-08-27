@@ -5,7 +5,7 @@ export default class MainBaseComponet extends Component {
         const {base} = this.props.match.params
         console.log(base)
         return (
-            <div className="flex-center" style={{height: "70vh"}}>
+            <div className="flex-center">
                 <h1 className="display-1 text-info">
                     {
                         base + ' Coming Soon'
