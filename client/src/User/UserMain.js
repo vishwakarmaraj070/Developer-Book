@@ -126,7 +126,7 @@ export default class UserMain extends Component {
                                                   }}
                                                   className="edit-pen"
                                                 >
-                                                  <i className="fa fa-pencil hoverEdit" />
+                                                  <i className="fas fa-pencil-alt hoverEdit" />
                                                 </span>
                                                 {ReactHtmlParser(
                                                   itemData.content

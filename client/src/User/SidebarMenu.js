@@ -106,7 +106,7 @@ export default class SidebarMenu extends Component {
                   isEditMenu: true,
                   editMenuValue: menu.menu
                 })
-              }} className="fa fa-pencil hoverEdit mx-1 px-1" />
+              }} className="fas fa-pencil-alt hoverEdit mx-1 px-1" />
               <i className="fa fa-angle-down px-1 mx-1" />
             </span>
           </a>
@@ -170,7 +170,7 @@ export default class SidebarMenu extends Component {
                             e.preventDefault();
                             this.setEditItem(item.item)
                           }}
-                          className="fa fa-pencil hoverEdit mx-1 px-1"
+                          className="fas fa-pencil-alt hoverEdit mx-1 px-1"
                         />
                       </span>
                     </Link>
